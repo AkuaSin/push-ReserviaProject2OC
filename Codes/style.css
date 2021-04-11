@@ -40,13 +40,82 @@ h1 {
     font-weight:bold;
     font-size: 150%;
 }
-.search-container {
+.SearchField {
+    display: flex;
+    flex-wrap: wrap;
+}
+.SearchField i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F2F2;
+    height:40px;
+    width: 40px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.SearchField input {
+    display: flex;
+    border: 1px solid #F2F2F2;
+    color:black;
     font-weight: bold;
-    font-size: 90%;
+    padding: 10px;
+}
+.SearchField button {
+    border: transparent;
+    background-color: #0065FC ;
+    color:white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: bold;
+    padding: 10px;
 }
 .filters {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
     font-weight: bold;
+    gap: 15px;
     font-size: 110%;
+    padding-top: 20px;
+}
+.filters button {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    border: 2px solid #D9D9D9;
+    background-color: white;
+    border-radius: 20px 20px;
+    height: 40px;
+    padding-right: 20px;
+}
+.filters i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#0065FC;
+    background-color:#DEEBFF ;
+    border-radius: 20px 20px;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
+    margin-left:-8px;
+}
+.information {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+.information i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065FC;
+    border:1px solid #f2f2f2;
+    width:20px;
+    height:20px;
+    border-radius:10px;
+    font-size: 70%;
 }
 h2 {
     font-weight:bold;
@@ -67,7 +136,7 @@ h4 {
     border: 0px solid transparent;
     background-color: #F2F2F2;
     border-radius: 50px 50px;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-right: 50px;
     padding-left: 50px;
     padding-bottom: 50px;
@@ -86,7 +155,6 @@ h4 {
     padding: auto;
     max-width: 275px;;
     box-shadow: 0 0 20px #00000020;
-
 }
 .HostMainCardImg {
     height: 115px;
@@ -97,18 +165,40 @@ h4 {
     display: inline-block;
     margin-top: -20px;
     margin-left: 5px;
+    color:black;
+}
+.fa-star {
+    color: #D9D9D9;
+}
+
+.HostMainCardRanking1 :nth-child(-n+4){color:#0065FC}
+.HostMainCardRanking2 :nth-child(-n+5){color:#0065FC}
+.HostMainCardRanking3 :nth-child(-n+4){color:#0065FC}
+.HostMainCardRanking4 :nth-child(-n+3){color:#0065FC}
+.HostMainCardRanking5 :nth-child(-n+4){color:#0065FC}
+.HostMainCardRanking6 :nth-child(-n+5){color:#0065FC}
+
+.AfficherPlus {
+    display: flex;
+    color:black;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
 }
 .PopularHost {
     justify-content:space-around;
     border: 0px solid black;
     background-color: #F2F2F2;
     border-radius: 50px 50px;
-    padding-top: 50px;
+    padding-top: 30px;
     padding-right: 50px;
     padding-left: 50px;
     padding-bottom: 50px;
     overflow: hidden;
     float: right;
+}
+.PopularHostTitle i{
+    float:right;
 }
 .PopHostList
 {   display: grid;
@@ -132,7 +222,13 @@ h4 {
 }
 .HostPopCardTxt {
     display: inline-block;
+    color:black;
 }
+
+.HostPopCardRanking1 :nth-child(-n+5){color:#0065FC}
+.HostPopCardRanking2 :nth-child(-n+4){color:#0065FC}
+.HostPopCardRanking3 :nth-child(-n+4){color:#0065FC}
+
 .Activities {
     margin: 50px 50px 50px 50px;
     padding: 50px 50px 0px 50px;
@@ -143,19 +239,34 @@ h4 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     gap:50px;
-
 }
 .ActivitiesCard {
-    border: 7px solid white;
+    border: 0px solid transparent;
     border-radius: 20px 20px;
     overflow: auto;
     background-color: white;
     padding: auto;
     height: fit-content;
     box-shadow: 0 0 20px #00000020;
-    
+}
+.ActivitiesCardTxt {
+    margin-left: 20px;
+    margin-bottom: -20px;
+    margin-top: -5px;
+    color:black;
+    text-decoration: none;
 }
 .Activities img {
     object-fit: cover;
     width:100%;
+}
+footer{
+    color:black;
+    border: 1px solid black;
+    background-color: #F2F2F2;
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: left;
+    gap:20%;
+    padding: 50px;
 }

@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="style.css"/>
+        <script src="https://kit.fontawesome.com/85f900a97f.js" crossorigin="anonymous"></script>
         <title>Reservia
         </title>
     </head>
@@ -16,8 +17,8 @@
                 </a>
             </div>
              <div class="HeaderNav">
-                <a href="Hebergements.html">Hébergements </a>
-                <a href="Activites.html">Activités </a>
+                <a href="#Hosting">Hébergements </a>
+                <a href="#Activities">Activités </a>
                 <a href="SignUp.html">S'inscrire</a>
             </div>
         </header>
@@ -25,21 +26,25 @@
             <section class="TopPart">
                 <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
                 <p>En plein centre ville ou en pleine nature</p>
-                <div class="search-container">
+                <div class="SearchField">
+                    <i class="fas fa-map-marker-alt"></i>
                     <input type="text" placeholder="Marseille, France">
                     <button type="button">Rechercher</button>
                 </div>
                 <div class="filters">
                     <p>Filtres</p>
-                    <button>Economique</button>
-                    <button>Familial</button>
-                    <button>Romantique</button>
-                    <button>Animaux autorisé</button>
+                    <button><i class="fas fa-money-bill-wave"></i>Économique</button>
+                    <button><i class="fas fa-child"></i>Familial</button>
+                    <button><i class="fas fa-heart"></i>Romantique</button>
+                    <button><i class="fas fa-dog"></i>Animaux autorisé</button>
+                </div>
+                <div class="information">
+                    <i class="fas fa-info"></i><p>Plus de 500 logements sont disponibles dans cette ville</p>
                 </div>
             </section>
              <section class="Hosts">
             <section class="HostingMain">
-                <div class="HostMainTitle"><h2>Hébergement à Marseille</h2></div>
+                <div class="HostMainTitle"><h2 id="Hosting">Hébergement à Marseille</h2></div>
                 <div class="HostMainList">
                     <article class="HostMainCard">
                         <a href="#">
@@ -47,8 +52,12 @@
                             <div class="HostMainCardTxt">
                                 <h4>Auberge la Cannebière</h4>
                                 <p>Nuit à partir de 25€</p>
-                                <div class=HostMainCardRanking>
-
+                                <div class=HostMainCardRanking1>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
                             </div>
                         </a>
@@ -59,8 +68,12 @@
                             <div class="HostMainCardTxt">
                                 <h4>Hôtel du port</h4>
                                 <p>Nuit à partir de 52€</p>
-                                <div class=HostMainCardRanking>
-                                    
+                                <div class=HostMainCardRanking2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
                             </div>
                         </a>
@@ -71,8 +84,12 @@
                             <div class="HostMainCardTxt">
                                 <h4>Hôtel Les mouettes</h4>
                                 <p>Nuit à partir de 76€</p>
-                                <div class=HostMainCardRanking>
-                                    
+                                <div class=HostMainCardRanking3>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>                                    
                                 </div>
                             </div>
                         </a>
@@ -83,8 +100,12 @@
                             <div class="HostMainCardTxt">
                                 <h4>Hôtel de la mer</h4>
                                 <p>Nuit à partir de 46€</p>
-                                <div class=HostMainCardRanking>
-                                    
+                                <div class=HostMainCardRanking4>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
                             </div>
                         </a>
@@ -95,8 +116,12 @@
                             <div class="HostMainCardTxt">
                                 <h4>Auberge Le Panier</h4>
                                 <p>Nuit à partir de 23€</p>
-                                <div class=HostMainCardRanking>
-                                    
+                                <div class=HostMainCardRanking5>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
                             </div>
                         </a>
@@ -107,17 +132,23 @@
                             <div class="HostMainCardTxt">
                                 <h4>Hôtel chez Amina</h4>
                                 <p>Nuit à partir de 96€</p>
-                                <div class=HostMainCardRanking>
-                                    
+                                <div class=HostMainCardRanking6>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
                             </div>
                         </a>
                     </article>
                 </div>
-
+                <div class="AfficherPlus">
+                    <a href="#">Afficher plus</a>
+                </div>
             </section>
             <section class="PopularHost">
-                <div class="PopularHostTitle"></div><h2>Les plus populaires</h2></div>
+                <div class="PopularHostTitle"><h2>Les plus populaires<i class="fas fa-chart-line"></i></h2></div>
                 <div class="PopHostList">
                     <article class="HostPopCard">
                         <a href="#">
@@ -125,8 +156,12 @@
                             <div class="HostPopCardTxt">
                                 <h4>Hôtel Le soleil du matin</h4>
                                 <p>Nuit à partir de 128€</p>
-                                <div class=HostPopCardRanking>
-
+                                <div class=HostPopCardRanking1>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
                             </div>
                         </a>
@@ -137,8 +172,12 @@
                             <div class="HostPopCardTxt">
                                 <h4>Au coeur de l'eau Chambres d'hôtes</h4>
                                 <p>Nuit à partir de 71€</p>
-                                <div class=HostPopCardRanking>
-
+                                <div class=HostPopCardRanking2>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
                             </div>
                         </a>
@@ -149,8 +188,12 @@
                             <div class="HostPopCardTxt">
                                 <h4>Hôtel Tout bleu et Blanc</h4>
                                 <p>Nuit à partir de 68€</p>
-                                <div class=HostPopCardRanking>
-
+                                <div class=HostPopCardRanking3>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
                                 </div>
                             </div>
                         </a>
@@ -160,7 +203,7 @@
             </section>
             </section>
             <section class="Activities">
-                <div class="ActivitiesTitle"><h2>Activités à Marseille</h2></div>
+                <div class="ActivitiesTitle"><h2 id="Activities">Activités à Marseille</h2></div>
                 <div class="ActivitiesList">
                     <article class="ActivitiesCard">
                         <a href="#">
