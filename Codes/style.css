@@ -129,13 +129,19 @@ h4 {
     display: grid;
     margin-left:50px;
     margin-right:50px;
-    grid-template-columns:2.5fr 1fr ;
+    grid-template-columns:repeat(15,1fr);
     column-gap: 50px;
+}
+.HostingMain {
+    grid-column: 1/11;
+}
+.PopularHost {
+    grid-column: 11/16;
 }
 .HostingMain {
     border: 0px solid transparent;
     background-color: #F2F2F2;
-    border-radius: 50px 50px;
+    border-radius: 30px;
     padding-top: 30px;
     padding-right: 50px;
     padding-left: 50px;
@@ -144,28 +150,37 @@ h4 {
 }
 .HostMainList{
     display: grid;
-    grid-template-areas:"three three three"; 
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:1fr 1fr ;
     gap:50px;
 }
 .HostMainCard{
+    display: flex;
+    flex-wrap: wrap;
     border: 7px solid white;
-    border-radius: 20px 20px;
+    border-radius: 20px;
     overflow: hidden;
     background-color: white;
-    padding: auto;
-    max-width: 275px;;
     box-shadow: 0 0 20px #00000020;
 }
 .HostMainCardImg {
-    height: 115px;
-    width: 275px;
+    display:block;
+    height: 135px;
+    min-height: 75px ;
+    max-height: 150px;
+    width: 100%;
     object-fit: cover;
 }
 .HostMainCardTxt {
-    display: inline-block;
+    display:block;
     margin-top: -20px;
-    margin-left: 5px;
+    margin-left: 10px;
+    margin-bottom: -25px;
     color:black;
+}
+.HostMainCardTxt {
+    display: grid;
+    grid-template-rows: repeat(3,33%);
 }
 .fa-star {
     color: #D9D9D9;
@@ -179,23 +194,22 @@ h4 {
 .HostMainCardRanking6 :nth-child(-n+5){color:#0065FC}
 
 .AfficherPlus {
-    display: flex;
     color:black;
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
+    padding-top: 50px;
+    padding-bottom: 10px ;
 }
 .PopularHost {
-    justify-content:space-around;
     border: 0px solid black;
     background-color: #F2F2F2;
-    border-radius: 50px 50px;
+    border-radius: 30px;
     padding-top: 30px;
     padding-right: 50px;
     padding-left: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     overflow: hidden;
-    float: right;
 }
 .PopularHostTitle i{
     float:right;
@@ -203,26 +217,42 @@ h4 {
 .PopHostList
 {   display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    gap:50px;
+    gap:40px;
 }
 .HostPopCard {
     border: 7px solid white;
-    border-radius: 20px 20px;
-    overflow: auto;
+    border-radius: 20px;
+    overflow:hidden;
     background-color: white;
-    padding: auto;
-    max-height: 130px;
     box-shadow: 0 0 20px #00000020;
 }
-.HosPopCardImg {
-    display: inline-block;
-    height: 130px;
-    width: 130px;
+.HostPopCard a {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+}
+.HostPopCardImg {
+    object-fit:cover;
+    width:100%;
+    height:100%;
+    position: absolute;
+}
+.HostPopCardImgHold {
+    position: relative;
+    height: 170px;
+    width: 33%;
     object-fit: cover;
+    overflow: hidden;
 }
 .HostPopCardTxt {
-    display: inline-block;
+    display: flex;
+    flex-flow: column wrap;
     color:black;
+    inline-size: 50%;
+    justify-self: center;
+    justify-items: center;
+    margin-left: 20px;
+    margin-top: -10px;
 }
 
 .HostPopCardRanking1 :nth-child(-n+5){color:#0065FC}
@@ -230,43 +260,75 @@ h4 {
 .HostPopCardRanking3 :nth-child(-n+4){color:#0065FC}
 
 .Activities {
-    margin: 50px 50px 50px 50px;
-    padding: 50px 50px 0px 50px;
-    align-content: center
+    gap:20px;
+    margin: 50px;
 }
-.ActivitiesList {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap:50px;
+.ActivitiesTitle {
+    margin:50px;
 }
 .ActivitiesCard {
-    border: 0px solid transparent;
-    border-radius: 20px 20px;
-    overflow: auto;
+    border-radius: 20px;
     background-color: white;
-    padding: auto;
-    height: fit-content;
+    overflow: hidden ;
     box-shadow: 0 0 20px #00000020;
 }
 .ActivitiesCardTxt {
-    margin-left: 20px;
-    margin-bottom: -20px;
-    margin-top: -5px;
+    gap: 20px;
+    margin:20px;
     color:black;
     text-decoration: none;
+    height:fit-content;
 }
-.Activities img {
-    object-fit: cover;
+.ActivitiesCardImgHolder {
+    position:relative;
+    height: calc(100% - 70px);
+}
+.ActivitiesCardImg {
+    object-fit:cover;
     width:100%;
+    height:100%;
+    position: absolute;
 }
+
+.ActivitiesList{
+    display: grid;
+    gap:50px ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:repeat(12,1fr);
+}
+.ActivitiesCard:nth-child(1){
+    grid-row:1/13;
+    grid-column:1/2 ;
+}
+.ActivitiesCard:nth-child(2){
+    grid-row:1/8 ;
+    grid-column:2/3 ;
+}
+.ActivitiesCard:nth-child(3){
+    grid-row:8/13 ;
+    grid-column: 2/3 ;
+}
+.ActivitiesCard:nth-child(4){
+    grid-row: 1/13;
+    grid-column: 3/4;
+}
+.ActivitiesCard:nth-child(5){
+    grid-row: 1/7;
+    grid-column: 4/5;
+}
+.ActivitiesCard:nth-child(6){
+    grid-row: 7/13;
+    grid-column: 4/5;
+}
+
 footer{
     color:black;
-    border: 1px solid black;
     background-color: #F2F2F2;
+    text-decoration: none;
     display: flex;
     flex-flow: row nowrap;
     align-content: left;
     gap:20%;
-    padding: 50px;
+    padding: 10px 50px 30px 50px;
+    margin: -20px;
 }
