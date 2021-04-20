@@ -11,6 +11,7 @@
 * {
     font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
 }
+body{margin: 0;}
 header{
     display: flex;
     justify-content: space-between;
@@ -32,9 +33,6 @@ header{
 .HeaderNav a:hover{
     color:#0065FC;
     border-top-color:#0065FC;
-}
-.TopPart{
-    margin: 10px 50px 40px 50px
 }
 h1 {
     font-weight:bold;
@@ -125,33 +123,14 @@ h4 {
     font-weight:bold;
     font-size: 120%;
 }
+
+    /* Hébergements */
+
 .Hosts {
     display: grid;
-    margin-left:50px;
-    margin-right:50px;
-    grid-template-columns:repeat(15,1fr);
-    column-gap: 50px;
-}
-.HostingMain {
-    grid-column: 1/11;
-}
-.PopularHost {
-    grid-column: 11/16;
-}
-.HostingMain {
-    border: 0px solid transparent;
-    background-color: #F2F2F2;
-    border-radius: 30px;
-    padding-top: 30px;
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-bottom: 50px;
-    overflow: hidden;
 }
 .HostMainList{
     display: grid;
-    grid-template-columns:repeat(3,1fr);
-    grid-template-rows:1fr 1fr ;
     gap:50px;
 }
 .HostMainCard{
@@ -201,22 +180,14 @@ h4 {
     padding-top: 50px;
     padding-bottom: 10px ;
 }
-.PopularHost {
-    border: 0px solid black;
-    background-color: #F2F2F2;
-    border-radius: 30px;
-    padding-top: 30px;
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-bottom: 10px;
-    overflow: hidden;
-}
+
+    /* Les Plus Populaires*/
+
 .PopularHostTitle i{
     float:right;
 }
-.PopHostList
-{   display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+.PopHostList{
+    display: grid;
     gap:40px;
 }
 .HostPopCard {
@@ -239,7 +210,7 @@ h4 {
 }
 .HostPopCardImgHold {
     position: relative;
-    height: 170px;
+    height: 180px;
     width: 33%;
     object-fit: cover;
     overflow: hidden;
@@ -259,12 +230,191 @@ h4 {
 .HostPopCardRanking2 :nth-child(-n+4){color:#0065FC}
 .HostPopCardRanking3 :nth-child(-n+4){color:#0065FC}
 
+    /*Responsive*/
+    
+    @media (min-width: 1440px) {
+    .Hosts {
+        display: grid;
+        grid-template-columns:repeat(15,1fr);
+    }
+    .HostingMain {
+        grid-column: 1/11;
+    }
+    .PopularHost {
+        grid-column: 11/16;
+    }
+            
+    .PopHostList{
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    .Hosts {
+        margin-left:50px;
+        margin-right:50px;
+        grid-template-columns:repeat(15,1fr);
+        column-gap: 50px;
+    }
+    .HostingMain {
+        grid-column: 1/11;
+    }
+    .PopularHost {
+        grid-column: 11/16;
+    }
+}
+    @media (max-width: 1440px) {
+        .Hosts {
+          grid-template-columns: 1fr;
+          row-gap: 50px;
+        }
+        .HostingMain {grid-row: 2;}
+        .PopularHost{ grid-row: 1;}
+        .PopHostList {
+          grid-template-columns: repeat(1fr);
+          grid-template-rows: 160px;
+          grid-row-start: 1;
+        }
+        .HostMainList{
+            grid-template-columns:repeat(3,1fr);
+            grid-template-rows:1fr 1fr ;
+        }
+      }
+      @media (min-width: 925px) {
+        .HostMainList {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (min-width:650px) and (max-width:925px){
+        .HostMainList {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 650px) {
+        .HostMainList {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 1000px) {
+        .PopHostList {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(3, 9rem);
+        }
+      }
+      @media (min-width:1100px) {
+        .ActivitiesList {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows:repeat(12,1fr);
+        }
+        .ActivitiesCard:nth-child(1){
+            grid-row:1/13;
+            grid-column:1/2 ;
+        }
+        .ActivitiesCard:nth-child(2){
+            grid-row:1/8 ;
+            grid-column:2/3 ;
+        }
+        .ActivitiesCard:nth-child(3){
+            grid-row:8/13 ;
+            grid-column: 2/3 ;
+        }
+        .ActivitiesCard:nth-child(4){
+            grid-row: 1/13;
+            grid-column: 3/4;
+        }
+        .ActivitiesCard:nth-child(5){
+            grid-row: 1/7;
+            grid-column: 4/5;
+        }
+        .ActivitiesCard:nth-child(6){
+            grid-row: 7/13;
+            grid-column: 4/5;
+        }
+        
+      }
+      @media (max-width: 1100px) {
+        .ActivitiesList {
+          row-gap: 2rem;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: 200px 200px;
+        }
+      }
+      @media (max-width: 925px) {
+        .ActivitiesList {
+          row-gap: 2rem;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: 200px 200px 200px;
+        }
+      }
+      @media (max-width: 650px) {
+        .ActivitiesList {
+          row-gap: 2rem;
+          grid-template-columns: 1fr;
+          grid-template-rows: 200px 200px 200px 200px 200px 200px;
+        }
+      }
+      @media (max-width: 448px){
+            .HostingMain{margin: 10px}
+            .TopPart{margin: 10px}
+            .Activities {
+                gap:20px;margin: 10px}
+                .ActivitiesTitle {
+                    margin:10px;}
+            .Hosts {
+                margin-left:10px;
+                margin-right:10px;
+                column-gap: 10px;
+            }
+            .HostingMain {
+            margin: 10px;
+            overflow: hidden;}
+      }
+      .PopularHost {
+        width: 100%;
+        background-color: #F2F2F2;
+        padding-top: 20px;
+        padding-right: 50px;
+        padding-bottom: 20px;
+        overflow: hidden;
+    }
+      @media (min-width: 448px){
+          .TopPart{
+            margin: 10px 50px 40px 50px
+        }
+        .Activities {
+            gap:20px;
+            margin: 50px;
+        }
+        .ActivitiesTitle {
+            margin:50px;}
+        .Hosts {
+            margin-left:50px;
+            margin-right:50px;
+            column-gap: 50px;
+        }
+        .HostingMain {
+            border: 0px solid transparent;
+            background-color: #F2F2F2;
+            border-radius: 30px;
+            padding-top: 30px;
+            padding-right: 50px;
+            padding-left: 50px;
+            padding-bottom: 50px;
+            overflow: hidden;
+        }
+        .PopularHost {
+            width: auto;
+            border: 0px solid black;
+            background-color: #F2F2F2;
+            border-radius: 30px;
+            padding-top: 30px;
+            padding-right: 50px;
+            padding-left: 50px;
+            padding-bottom: 40px;
+            overflow: hidden;
+        }
+    }
+    /* Activités */
+
 .Activities {
     gap:20px;
-    margin: 50px;
-}
-.ActivitiesTitle {
-    margin:50px;
 }
 .ActivitiesCard {
     border-radius: 20px;
@@ -289,36 +439,9 @@ h4 {
     height:100%;
     position: absolute;
 }
-
 .ActivitiesList{
     display: grid;
     gap:50px ;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows:repeat(12,1fr);
-}
-.ActivitiesCard:nth-child(1){
-    grid-row:1/13;
-    grid-column:1/2 ;
-}
-.ActivitiesCard:nth-child(2){
-    grid-row:1/8 ;
-    grid-column:2/3 ;
-}
-.ActivitiesCard:nth-child(3){
-    grid-row:8/13 ;
-    grid-column: 2/3 ;
-}
-.ActivitiesCard:nth-child(4){
-    grid-row: 1/13;
-    grid-column: 3/4;
-}
-.ActivitiesCard:nth-child(5){
-    grid-row: 1/7;
-    grid-column: 4/5;
-}
-.ActivitiesCard:nth-child(6){
-    grid-row: 7/13;
-    grid-column: 4/5;
 }
 
 footer{
@@ -327,7 +450,7 @@ footer{
     text-decoration: none;
     display: flex;
     flex-flow: row nowrap;
-    align-content: left;
+    align-content: flex-start;
     gap:20%;
     padding: 10px 50px 30px 50px;
     margin: -20px;
