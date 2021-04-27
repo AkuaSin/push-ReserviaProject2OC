@@ -145,36 +145,43 @@ h4 {
     gap:50px;
 }
 .HostMainCard{
-    display: flex;
-    flex-wrap: wrap;
     border: 7px solid white;
     border-radius: 20px;
     overflow: hidden;
     background-color: #FFFFFF;
     box-shadow: 0 0 20px #00000020;
 }
+
 .HostMainCard:hover{
     transform:scale(1.03);
     transition-duration:100ms ;
 }
+.HostMainCard a {
+    display: grid;
+    grid-template-rows: auto auto;
+}
 .HostMainCardImg {
     display:block;
     height: 135px;
-    min-height: 75px ;
-    max-height: 150px;
     width: 100%;
     object-fit: cover;
 }
 .HostMainCardTxt {
-    display:block;
-    margin-top: -20px;
-    margin-left: 10px;
-    margin-bottom: -25px;
-    color:black;
-}
-.HostMainCardTxt {
     display: grid;
-    grid-template-rows: repeat(3,33%);
+    grid-template-rows: repeat(5,16px);
+    gap: 5px;
+    margin-left: 10px;
+    margin-top: -16px;
+    color:black;
+    height:100%
+}
+.HostMainCardTxt :nth-child(1){
+    grid-row: 0/3;
+}.HostMainCardTxt :nth-child(2){
+    grid-row: 3/5;
+}
+.HostMainCardTxt :nth-child(3){
+    grid-row: 6/7;
 }
 .fa-star {
     color: #D9D9D9;
@@ -290,7 +297,7 @@ footer a{
 
     /*Responsive*/
     
-    @media (min-width: 1440px) {
+          @media (min-width: 1440px) {
         .Hosts {
             display: grid;
             grid-template-columns:repeat(15,1fr);
@@ -324,8 +331,8 @@ footer a{
             gap:20%;
             padding: 10px 50px 30px 50px;
         }
-    }
-        @media (max-width: 1440px) {
+          }
+          @media (max-width: 1440px) {
             .Hosts {
               grid-template-columns: 1fr;
               row-gap: 50px;
@@ -510,7 +517,7 @@ footer a{
             }
     
           }
-          @media (max-width: 450px){
+          @media (max-width: 520px){
                 .TopPart{padding: 20px}
                 .RechercheText{
                     display: none;
@@ -549,7 +556,7 @@ footer a{
                     gap:30px ;
                 }
           }
-          @media (min-width: 450px){
+          @media (min-width: 520px){
             .TopPart{
                 margin: 10px 50px 40px 50px
             }
@@ -593,4 +600,4 @@ footer a{
             .ActivitiesList{
                 gap:50px ;
             }
-        }
+          }
