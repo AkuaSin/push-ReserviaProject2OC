@@ -11,15 +11,15 @@
 
     <body>
         <header>
-            <div class="HeaderLogo">
-                <a href="Base.html" title="Retour à l'accueil">
-                    <img class=Logo src=images/logo/Reservia.svg alt="Reservia">
-                </a>
-            </div>
              <div class="HeaderNav">
-                <a href="#Hosting">Hébergements </a>
-                <a href="#Activities">Activités </a>
-                <a href="#">S'inscrire</a>
+                <div class="HeaderLogo">
+                    <a href="Base.html" title="Retour à l'accueil">
+                        <img class=Logo src=images/logo/Reservia.svg alt="Reservia">
+                    </a>
+                </div>
+                <a class="HostingHeader" href="#Hosting">Hébergements </a>
+                <a class="ActivitiesHeader" href="#Activities">Activités </a>
+                <a class="SignUp" href="#">S'inscrire</a>
             </div>
         </header>
         <main>
@@ -29,7 +29,8 @@
                 <div class="SearchField">
                     <i class="fas fa-map-marker-alt"></i>
                     <input type="text" placeholder="Marseille, France">
-                    <button type="button">Rechercher</button>
+                    <button type="button" class="RechercheText">Rechercher</button>
+                    <button type="button" class="RechercheIcon"><i class="fas fa-search"></i></button>
                 </div>
                 <div class="filters">
                     <p>Filtres</p>

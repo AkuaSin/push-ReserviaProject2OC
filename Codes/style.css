@@ -12,27 +12,27 @@
     font-family: Raleway, Verdana, Geneva, Tahoma, sans-serif;
 }
 body{margin: 0;}
-header{
-    display: flex;
-    justify-content: space-between;
-    margin-left: 50px;
-    margin-right: 50px;
+a:visited, a:link, a:active {
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    cursor:pointer;
+}
+button:hover{
+    cursor: pointer;
 }
 .HeaderNav a{
-    display:inline-flex;
     color:black;
-    text-align:center;
-    border:2px solid transparent;
-    padding: 20px 20px;
-    padding-top: 25px;
-    margin-top: -8px;
     text-decoration:none ;
     font-size: 14px;
-    
 }
 .HeaderNav a:hover{
     color:#0065FC;
-    border-top-color:#0065FC;
+}
+.SignUp{
+    color:#0065FC !important;
+    font-weight: bold;
 }
 h1 {
     font-weight:bold;
@@ -85,7 +85,18 @@ h1 {
     background-color: white;
     border-radius: 20px 20px;
     height: 40px;
-    padding-right: 20px;
+    padding-right: 15px;
+    gap:7px
+}
+.filters button:hover{
+    transition-duration:100ms;
+    transform:scale(1.01);
+    background-color: #F2F2F2;
+}
+.RechercheIcon i{
+    background:none;
+    height: auto;
+    width: auto;
 }
 .filters i {
     display: flex;
@@ -139,8 +150,12 @@ h4 {
     border: 7px solid white;
     border-radius: 20px;
     overflow: hidden;
-    background-color: white;
+    background-color: #FFFFFF;
     box-shadow: 0 0 20px #00000020;
+}
+.HostMainCard:hover{
+    transform:scale(1.03);
+    transition-duration:100ms ;
 }
 .HostMainCardImg {
     display:block;
@@ -177,8 +192,6 @@ h4 {
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    padding-top: 50px;
-    padding-bottom: 10px ;
 }
 
     /* Les Plus Populaires*/
@@ -197,10 +210,13 @@ h4 {
     background-color: white;
     box-shadow: 0 0 20px #00000020;
 }
+.HostPopCard:hover{
+    transform:scale(1.03);
+    transition-duration:100ms ;
+}
 .HostPopCard a {
-    display: flex;
-    flex-flow: row nowrap;
-    align-content: center;
+    display: grid;
+    grid-template-columns: 33% 1fr;
 }
 .HostPopCardImg {
     object-fit:cover;
@@ -211,216 +227,32 @@ h4 {
 .HostPopCardImgHold {
     position: relative;
     height: 180px;
-    width: 33%;
     object-fit: cover;
     overflow: hidden;
 }
 .HostPopCardTxt {
-    display: flex;
-    flex-flow: column wrap;
-    color:black;
-    inline-size: 50%;
-    justify-self: center;
-    justify-items: center;
-    margin-left: 20px;
-    margin-top: -10px;
+    display: grid;
 }
 
 .HostPopCardRanking1 :nth-child(-n+5){color:#0065FC}
 .HostPopCardRanking2 :nth-child(-n+4){color:#0065FC}
 .HostPopCardRanking3 :nth-child(-n+4){color:#0065FC}
 
-    /*Responsive*/
-    
-    @media (min-width: 1440px) {
-    .Hosts {
-        display: grid;
-        grid-template-columns:repeat(15,1fr);
-    }
-    .HostingMain {
-        grid-column: 1/11;
-    }
-    .PopularHost {
-        grid-column: 11/16;
-    }
-            
-    .PopHostList{
-        grid-template-rows: 1fr 1fr 1fr;
-    }
-    .Hosts {
-        margin-left:50px;
-        margin-right:50px;
-        grid-template-columns:repeat(15,1fr);
-        column-gap: 50px;
-    }
-    .HostingMain {
-        grid-column: 1/11;
-    }
-    .PopularHost {
-        grid-column: 11/16;
-    }
-}
-    @media (max-width: 1440px) {
-        .Hosts {
-          grid-template-columns: 1fr;
-          row-gap: 50px;
-        }
-        .HostingMain {grid-row: 2;}
-        .PopularHost{ grid-row: 1;}
-        .PopHostList {
-          grid-template-columns: repeat(1fr);
-          grid-template-rows: 160px;
-          grid-row-start: 1;
-        }
-        .HostMainList{
-            grid-template-columns:repeat(3,1fr);
-            grid-template-rows:1fr 1fr ;
-        }
-      }
-      @media (min-width: 925px) {
-        .HostMainList {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-      @media (min-width:650px) and (max-width:925px){
-        .HostMainList {
-          grid-template-columns: 1fr 1fr;
-        }
-      }
-      @media (max-width: 650px) {
-        .HostMainList {
-          grid-template-columns: 1fr;
-        }
-      }
-      @media (max-width: 1000px) {
-        .PopHostList {
-          grid-template-columns: 1fr;
-          grid-template-rows: repeat(3, 9rem);
-        }
-      }
-      @media (min-width:1100px) {
-        .ActivitiesList {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows:repeat(12,1fr);
-        }
-        .ActivitiesCard:nth-child(1){
-            grid-row:1/13;
-            grid-column:1/2 ;
-        }
-        .ActivitiesCard:nth-child(2){
-            grid-row:1/8 ;
-            grid-column:2/3 ;
-        }
-        .ActivitiesCard:nth-child(3){
-            grid-row:8/13 ;
-            grid-column: 2/3 ;
-        }
-        .ActivitiesCard:nth-child(4){
-            grid-row: 1/13;
-            grid-column: 3/4;
-        }
-        .ActivitiesCard:nth-child(5){
-            grid-row: 1/7;
-            grid-column: 4/5;
-        }
-        .ActivitiesCard:nth-child(6){
-            grid-row: 7/13;
-            grid-column: 4/5;
-        }
-        
-      }
-      @media (max-width: 1100px) {
-        .ActivitiesList {
-          row-gap: 2rem;
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: 200px 200px;
-        }
-      }
-      @media (max-width: 925px) {
-        .ActivitiesList {
-          row-gap: 2rem;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: 200px 200px 200px;
-        }
-      }
-      @media (max-width: 650px) {
-        .ActivitiesList {
-          row-gap: 2rem;
-          grid-template-columns: 1fr;
-          grid-template-rows: 200px 200px 200px 200px 200px 200px;
-        }
-      }
-      @media (max-width: 448px){
-            .HostingMain{margin: 10px}
-            .TopPart{margin: 10px}
-            .Activities {
-                gap:20px;margin: 10px}
-                .ActivitiesTitle {
-                    margin:10px;}
-            .Hosts {
-                margin-left:10px;
-                margin-right:10px;
-                column-gap: 10px;
-            }
-            .HostingMain {
-            margin: 10px;
-            overflow: hidden;}
-      }
-      .PopularHost {
-        width: 100%;
-        background-color: #F2F2F2;
-        padding-top: 20px;
-        padding-right: 50px;
-        padding-bottom: 20px;
-        overflow: hidden;
-    }
-      @media (min-width: 448px){
-          .TopPart{
-            margin: 10px 50px 40px 50px
-        }
-        .Activities {
-            gap:20px;
-            margin: 50px;
-        }
-        .ActivitiesTitle {
-            margin:50px;}
-        .Hosts {
-            margin-left:50px;
-            margin-right:50px;
-            column-gap: 50px;
-        }
-        .HostingMain {
-            border: 0px solid transparent;
-            background-color: #F2F2F2;
-            border-radius: 30px;
-            padding-top: 30px;
-            padding-right: 50px;
-            padding-left: 50px;
-            padding-bottom: 50px;
-            overflow: hidden;
-        }
-        .PopularHost {
-            width: auto;
-            border: 0px solid black;
-            background-color: #F2F2F2;
-            border-radius: 30px;
-            padding-top: 30px;
-            padding-right: 50px;
-            padding-left: 50px;
-            padding-bottom: 40px;
-            overflow: hidden;
-        }
-    }
     /* Activités */
 
 .Activities {
     gap:20px;
+    padding-bottom: 30px;
 }
 .ActivitiesCard {
     border-radius: 20px;
     background-color: white;
     overflow: hidden ;
     box-shadow: 0 0 20px #00000020;
+}
+.ActivitiesCard:hover{
+    transform:scale(1.03);
+    transition-duration:100ms ;
 }
 .ActivitiesCardTxt {
     gap: 20px;
@@ -441,17 +273,324 @@ h4 {
 }
 .ActivitiesList{
     display: grid;
-    gap:50px ;
 }
-
 footer{
     color:black;
     background-color: #F2F2F2;
     text-decoration: none;
-    display: flex;
-    flex-flow: row nowrap;
-    align-content: flex-start;
-    gap:20%;
-    padding: 10px 50px 30px 50px;
-    margin: -20px;
+    width: 100%;
 }
+footer li{
+    list-style-type: none;
+    text-decoration: none;
+}
+footer a{
+    line-height: 30px;
+}
+
+    /*Responsive*/
+    
+    @media (min-width: 1440px) {
+        .Hosts {
+            display: grid;
+            grid-template-columns:repeat(15,1fr);
+        }
+        .HostingMain {
+            grid-column: 1/11;
+        }
+        .PopularHost {
+            grid-column: 11/16;
+        }
+                
+        .PopHostList{
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        .Hosts {
+            margin-left:50px;
+            margin-right:50px;
+            grid-template-columns:repeat(15,1fr);
+            column-gap: 50px;
+        }
+        .HostingMain {
+            grid-column: 1/11;
+        }
+        .PopularHost {
+            grid-column: 11/16;
+        }
+        footer {
+            display: flex;
+            flex-flow: row nowrap;
+            align-content: flex-start;
+            gap:20%;
+            padding: 10px 50px 30px 50px;
+        }
+    }
+        @media (max-width: 1440px) {
+            .Hosts {
+              grid-template-columns: 1fr;
+              row-gap: 50px;
+            }
+            .HostingMain {grid-row: 2;}
+            .PopularHost{ grid-row: 1;}
+            .PopHostList {
+              grid-template-columns:1fr;
+              grid-template-rows: 160px;
+              grid-row-start: 1;
+            }
+            .HostMainList{
+                grid-template-columns:repeat(3,1fr);
+                grid-template-rows:1fr 1fr ;
+            }
+            footer {
+                display: flex;
+                flex-flow: row nowrap;
+                align-content: flex-start;
+                gap:10% ;
+                padding: 10px 50px 30px 50px;
+            }
+          }
+          @media (min-width: 925px) {
+            .HostMainList {
+              grid-template-columns: repeat(3, 1fr);
+            }
+          }
+          @media (max-width: 925px) {
+            .ActivitiesList {
+              row-gap: 30px;
+              grid-template-columns: repeat(2, 1fr);
+              grid-template-rows: 200px 200px 200px;
+            }
+              footer {
+                display: flex;
+                flex-flow:column nowrap;
+                align-content: flex-start;
+                gap:20%;
+                padding: 10px;
+            }        .HostMainList {
+              grid-template-columns: 1fr 1fr;
+            }
+          }
+          @media (max-width: 1000px) {
+            .PopHostList {
+              grid-template-columns: 1fr;
+              grid-template-rows: repeat(3, 140px);
+            }
+          }
+          @media (min-width:1100px) {
+            .ActivitiesList {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows:repeat(12,1fr);
+            }
+            .ActivitiesCard:nth-child(1){
+                grid-row:1/13;
+                grid-column:1/2 ;
+            }
+            .ActivitiesCard:nth-child(2){
+                grid-row:1/8 ;
+                grid-column:2/3 ;
+            }
+            .ActivitiesCard:nth-child(3){
+                grid-row:8/13 ;
+                grid-column: 2/3 ;
+            }
+            .ActivitiesCard:nth-child(4){
+                grid-row: 1/13;
+                grid-column: 3/4;
+            }
+            .ActivitiesCard:nth-child(5){
+                grid-row: 1/7;
+                grid-column: 4/5;
+            }
+            .ActivitiesCard:nth-child(6){
+                grid-row: 7/13;
+                grid-column: 4/5;
+            }
+            .HostPopCardTxt{
+                grid-template-rows: 35% 50% 15%;
+                margin:-15px 20px 0px 20px;
+            }
+          }
+          @media (max-width: 1100px) {
+            .ActivitiesList {
+              row-gap: 30px;
+              grid-template-columns: repeat(3, 1fr);
+              grid-template-rows: 200px 200px;
+            }
+            footer {
+                display: flex;
+                flex-flow:row nowrap;
+                align-content: flex-start;
+                gap:5%;
+                padding: 10px;
+            }
+            .HostPopCardTxt{
+                grid-template-rows: 40% 30% 30%;
+                margin:-20px 20px 30px 20px;
+            }
+          }
+          @media (max-width: 800px){
+            .ActivitiesList {
+                row-gap: 30px;
+                grid-template-columns:1fr 1fr;
+                grid-template-rows: 200px 200px 200px;
+              }
+          }
+          @media (max-width: 650px) {
+            .ActivitiesList {
+              row-gap: 30px;
+              grid-template-columns: 1fr;
+              grid-template-rows: 200px 200px 200px 200px 200px 200px;
+            }
+            .HostMainList {
+                grid-template-columns: 1fr;
+              }
+              footer {
+                display: flex;
+                flex-flow:column nowrap;
+                align-content: flex-start;
+                gap:10%;
+                padding: 10px;
+            }
+            .HeaderNav{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(2, 1fr);
+              }         
+              .HeaderLogo { grid-area: 1 / 1 / 2 / 2; }
+              .SignUp { grid-area: 1 / 4 / 2 / 5; }
+              .HostingHeader { grid-area: 2 / 1 / 3 / 3; }
+              .ActivitiesHeader { grid-area: 2 / 3 / 3 / 5; }
+              
+            .HeaderNav a{
+                text-align:center;
+                border:3px solid transparent;
+                padding: 20px 20px;
+                padding-top: 25px;
+                gap:20px;
+            }
+            .HostingHeader, .ActivitiesHeader{
+                border-bottom-color: #D9D9D9 !important;
+            }
+            .HostingHeader:hover, .ActivitiesHeader:hover{
+                border-bottom-color:#0065FC !important;
+            }
+          }
+          @media (min-width: 650px) {
+            header{
+                margin-left: 50px;
+                margin-right: 50px;
+            }
+            .HeaderNav{
+                display: grid;
+                width: 100%;
+                grid-template-columns: repeat(8,1fr);
+                gap:10px
+            }
+            .HeaderLogo{
+                margin-top: 10px;
+            }
+            .HostingHeader, .ActivitiesHeader, .SignUp {
+                text-align:center;
+                border:2px solid transparent;
+                padding: 20px 20px;
+                padding-top: 25px;
+                gap:20px
+            }
+            .SignUp{
+                grid-column:19/21;
+            }
+            .ActivitiesHeader{
+                grid-column: 17/19;
+            }
+            .HostingHeader{
+                grid-column: 14/17;
+            }
+            .HeaderNav a:hover{
+                border-top-color:#0065FC;
+            }
+    
+          }
+          @media (max-width: 450px){
+                .TopPart{padding: 20px}
+                .RechercheText{
+                    display: none;
+                }
+                .filters p{width: 100%;}
+                .Hosts {gap: 10px;}
+                .HostingMain {
+                padding:20px;
+                overflow: hidden;
+                }
+                .PopularHost {
+                width:100%;
+                background-color: #F2F2F2;
+                padding: 20px;
+                overflow: hidden;
+                }
+                .PopularHostTitle {
+                    margin-right: 35px;
+                    padding-bottom: 7px;
+                }
+                .PopHostList{
+                    width: auto;
+                    margin-right: 35px;
+                }
+                .AfficherPlus{
+                padding-top: 30px;
+                padding-bottom: 10px ;
+                }
+                .Activities {
+                    margin: 10px;
+                }
+                .ActivitiesTitle{
+                    padding-bottom: 20px;
+                }
+                .ActivitiesList{
+                    gap:30px ;
+                }
+          }
+          @media (min-width: 450px){
+            .TopPart{
+                margin: 10px 50px 40px 50px
+            }
+            .RechercheIcon {
+                display: none;
+            }
+            .filters p{width: auto;}
+            .Hosts {
+                margin-left:50px;
+                margin-right:50px;
+                gap: 50px;
+            }
+            .HostingMain {
+                border: 0px solid transparent;
+                background-color: #F2F2F2;
+                border-radius: 30px;
+                padding: 50px 30px 50px 50px;
+                overflow: hidden;
+            }
+            .PopularHost {
+                width: auto;
+                border: 0px solid black;
+                background-color: #F2F2F2;
+                border-radius: 30px;
+                padding-top: 30px;
+                padding-right: 50px;
+                padding-left: 50px;
+                padding-bottom: 40px;
+                overflow: hidden;
+            }
+            .AfficherPlus{
+                padding-top: 50px;
+            }
+            .Activities {
+                gap:20px;
+                margin: 50px;
+            }
+            .ActivitiesTitle{
+                padding-bottom: 20px;
+            }
+            .ActivitiesList{
+                gap:50px ;
+            }
+        }
