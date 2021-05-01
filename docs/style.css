@@ -522,6 +522,7 @@ footer a{
                 .RechercheText{
                     display: none;
                 }
+                .SearchField input{flex:auto;overflow: auto;}
                 .filters p{width: 100%;}
                 .Hosts {gap: 10px;}
                 .HostingMain {
