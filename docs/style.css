@@ -85,8 +85,8 @@ h1 {
     background-color: white;
     border-radius: 20px 20px;
     height: 40px;
-    padding-right: 15px;
-    gap:7px
+    padding-right: 16px;
+    gap:9px
 }
 .filters button:hover{
     transition-duration:100ms;
