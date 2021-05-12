@@ -58,6 +58,10 @@ h1 {
     color:black;
     font-weight: bold;
     padding: 10px;
+    font-size: 16px;
+}
+.SearchField ::placeholder{
+    color:black;
 }
 .SearchField button {
     border: transparent;
