@@ -374,9 +374,10 @@ footer a{
                 display: flex;
                 flex-flow:column nowrap;
                 align-content: flex-start;
-                gap:20%;;
-            }        .HostMainList {
-              grid-template-columns: 1fr 1fr;
+                gap:20%;
+            }        
+            .HostMainList {
+                grid-template-columns: 1fr 1fr;
             }
           }
           @media (max-width: 1000px) {
@@ -530,18 +531,18 @@ footer a{
                 overflow: hidden;
                 }
                 .PopularHost {
-                width:100%;
+                width:auto;
                 background-color: #F2F2F2;
-                padding: 20px;
+                padding: 20px 0px 20px 20px;
                 overflow: hidden;
                 }
                 .PopularHostTitle {
-                    margin-right: 35px;
+                    margin-right: 20px;
                     padding-bottom: 7px;
                 }
                 .PopHostList{
                     width: auto;
-                    margin-right: 35px;
+                    margin-right: 20px;
                 }
                 .AfficherPlus{
                 padding-top: 30px;
