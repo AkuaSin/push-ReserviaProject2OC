@@ -414,7 +414,7 @@ footer a{
                 grid-column: 4/5;
             }
             .HostPopCardTxt{
-                grid-template-rows: 35% 50% 15%;
+                grid-template-rows: 35% 40% 15%;
                 margin:-15px 20px 0px 20px;
             }
           }
