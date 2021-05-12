@@ -145,7 +145,7 @@ h4 {
     gap:50px;
 }
 .HostMainCard{
-    border: 7px solid white;
+    padding: 7px;
     border-radius: 20px;
     overflow: hidden;
     background-color: #FFFFFF;
@@ -165,6 +165,8 @@ h4 {
     height: 135px;
     width: 100%;
     object-fit: cover;
+    border-top-left-radius : 16px;
+    border-top-right-radius: 16px;
 }
 .HostMainCardTxt {
     display: grid;
