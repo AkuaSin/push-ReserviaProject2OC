@@ -380,12 +380,6 @@ footer a{
                 grid-template-columns: 1fr 1fr;
             }
           }
-          @media (max-width: 1000px) {
-            .PopHostList {
-              grid-template-columns: 1fr;
-              grid-template-rows: repeat(3, 140px);
-            }
-          }
           @media (min-width:1100px) {
             .ActivitiesList {
                 grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -443,6 +437,10 @@ footer a{
                 grid-template-columns:1fr 1fr;
                 grid-template-rows: 200px 200px 200px;
               }
+            .PopHostList {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 140px);
+            }
           }
           @media (max-width: 650px) {
             .ActivitiesList {
