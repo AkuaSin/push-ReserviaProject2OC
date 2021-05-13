@@ -220,7 +220,7 @@ h4 {
     gap:40px;
 }
 .HostPopCard {
-    border: 7px solid white;
+    padding: 7px;
     border-radius: 20px;
     overflow:hidden;
     background-color: white;
@@ -242,9 +242,10 @@ h4 {
 }
 .HostPopCardImgHold {
     position: relative;
-    height: 180px;
     object-fit: cover;
     overflow: hidden;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px ;
 }
 .HostPopCardTxt {
     display: grid;
@@ -439,6 +440,10 @@ footer a{
                 margin:-20px 20px 30px 20px;
             }
           }
+          @media (min-width:800px) {
+            .HostPopCardImgHold {
+                height: 165px;}
+          }
           @media (max-width: 800px){
             .ActivitiesList {
                 row-gap: 30px;
@@ -449,6 +454,8 @@ footer a{
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(3, 140px);
             }
+            .HostPopCardImgHold {
+                height: 125px;}
           }
           @media (max-width: 650px) {
             .ActivitiesList {
